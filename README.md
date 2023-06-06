@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://typescript.tips/">
-    <img alt="TypeScript.tips logo" src="public/logo.png" width="300" height="300" style="max-width: 100%;" />
+    <img alt="TypeScript.tips logo" src="public/logo.png" width="200" height="200" style="max-width: 100%;" />
   </a>
 </p>
 
