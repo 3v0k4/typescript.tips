@@ -8,3 +8,9 @@
 
 <h3 align="center">Make bugs impossible</h3>
 <p align="center">One TypeScript Tip At A Time</p>
+
+---
+
+Ready to step up your static types game in TypeScript?
+
+Visit [TypeScript.tips](https://typescript.tips/).
