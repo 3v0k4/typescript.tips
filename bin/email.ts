@@ -17,6 +17,7 @@ const toHtml = ({
   badCode,
   goodCode,
   path,
+  twitterHandle,
 }: {
   index: string;
   title: string;
@@ -24,6 +25,7 @@ const toHtml = ({
   badCode: string;
   goodCode: string;
   path: string;
+  twitterHandle: string;
 }) => `
   <div data-index="${index}" data-title="${title.replace(/\s/g, "-")}">
     <div style="text-align: center; margin-top: 20px;">
@@ -40,7 +42,7 @@ const toHtml = ({
       <h1 style="font-size: 2rem;">${title}</h1>
       <div style="line-height: 1rem;">
         <div style="margin-top: 10px;">
-          <a style="color: rgb(156, 163, 175); font-size: 0.8rem;" href="https://twitter.com/RiccardoOdone">@RiccardoOdone</a>
+          <a style="color: rgb(156, 163, 175); font-size: 0.8rem;" href="https://twitter.com/${twitterHandle}">${twitterHandle}</a>
         </div>
         <div>
           <span style="color: rgb(156, 163, 175); font-size: 0.8rem;">•</span>
