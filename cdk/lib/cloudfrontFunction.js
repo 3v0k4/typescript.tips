@@ -9,7 +9,7 @@ function handler(event) {
       statusDescription: 'Found',
       headers: {
         location: {
-          value: `https://typescript.tips${uri}`
+          value: `https://typescript.odone.me${uri}`
         }
       }
     };

@@ -38,7 +38,7 @@ export const readPages = (): Page[] => {
 
     return {
       ...parsed,
-      canonical: `https://typescript.tips${path(filename)}`,
+      canonical: `https://typescript.odone.me${path(filename)}`,
       previousTipPath: path(at(i - 1, filenames)),
       nextTipPath: path(at(i + 1, filenames)),
       slug: slugFrom(filename),
@@ -56,7 +56,7 @@ export const pageLinksByIndex: PageLink[] = tips.map((filename) => {
   const parsed = yaml.parse(fs.readFileSync(`./tips/${filename}`).toString());
 
   return {
-    canonical: `https://typescript.tips${path(filename)}`,
+    canonical: `https://typescript.odone.me${path(filename)}`,
     title: parsed.title,
   };
 });

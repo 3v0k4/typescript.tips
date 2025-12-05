@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://typescript.tips/sitemap-index.xml
+Sitemap: https://typescript.odone.me/sitemap-index.xml

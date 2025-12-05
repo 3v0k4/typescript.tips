@@ -29,11 +29,11 @@ const toHtml = ({
 }) => `
   <div data-index="${index}" data-title="${title.replace(/\s/g, "-")}">
     <div style="text-align: center; margin-top: 20px;">
-      <a style="color: rgb(156, 163, 175);" href="https://typescript.tips/${path}/">View this tip in your browser</a>
+      <a style="color: rgb(156, 163, 175);" href="https://typescript.odone.me/${path}/">View this tip in your browser</a>
     </div>
 
     <div style="margin-top: 20px; text-align: center;">
-      <img style="width: 100px; height: 100px; margin: auto;" src="https://typescript.tips/logo.png" alt="blue square containing tips in yellow and ts in white" />
+      <img style="width: 100px; height: 100px; margin: auto;" src="https://typescript.odone.me/logo.png" alt="blue square containing tips in yellow and ts in white" />
     </div>
 
     <br />
@@ -62,13 +62,13 @@ const toHtml = ({
       <br />
 
       <div>
-        <img  style="width: 64px; height: 64px; margin: auto;" src="http://typescript.tips/x.png" alt="red circle containing a white x" />
+        <img  style="width: 64px; height: 64px; margin: auto;" src="http://typescript.odone.me/x.png" alt="red circle containing a white x" />
         <div style="padding: 10px 0; text-align: left; border-radius: 5px;">
           <div style="background-color: rgb(243, 244, 246); filter: drop-shadow(rgba(0, 0, 0, 0.04) 0px 10px 8px) drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 3px); border-radius: 5px;">
             <span style="margin-top: 12px; border-radius: 50%; width: 13px; height: 13px; display: inline-block; margin-left: 20px; background-color: rgb(209, 213, 219);"></span>
             <span style="margin-top: 12px; border-radius: 50%; width: 13px; height: 13px; display: inline-block; margin-left: 8px; background-color: rgb(209, 213, 219);"></span>
             <a style="margin-top: 12px; border-radius: 50%; width: 13px; height: 13px; display: inline-block; margin-left: 8px; background-color: rgb(74, 222, 128);" href="${`https://www.typescriptlang.org/play?#src=${encodeURIComponent(
-              badCode
+              badCode,
             )}`}" aria-label="TypeScript Playground" target="_blank" rel="noreferrer noopener"></a>
             <pre style="background-color: rgb(243, 244, 246); padding: 0 20px 20px 20px; font-size: 0.9rem;"><code>${
               hljs.highlight((badCode || "").replace(/⛔️/g, "⛔️".charAt(0)), {
@@ -82,14 +82,14 @@ const toHtml = ({
       <br />
 
       <div>
-        <img  style="width: 64px; height: 64px; margin: auto;" src="http://typescript.tips/v.png" alt="green circle containing a white v" />
+        <img  style="width: 64px; height: 64px; margin: auto;" src="http://typescript.odone.me/v.png" alt="green circle containing a white v" />
 
         <div style="padding: 10px 0; text-align: left; border-radius: 5px;">
           <div style="background-color: rgb(243, 244, 246); filter: drop-shadow(rgba(0, 0, 0, 0.04) 0px 10px 8px) drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 3px); border-radius: 5px;">
             <span style="margin-top: 12px; border-radius: 50%; width: 13px; height: 13px; display: inline-block; margin-left: 20px; background-color: rgb(209, 213, 219);"></span>
             <span style="margin-top: 12px; border-radius: 50%; width: 13px; height: 13px; display: inline-block; margin-left: 8px; background-color: rgb(209, 213, 219);"></span>
             <a style="margin-top: 12px; border-radius: 50%; width: 13px; height: 13px; display: inline-block; margin-left: 8px; background-color: rgb(74, 222, 128);" href="${`https://www.typescriptlang.org/play?#src=${encodeURIComponent(
-              goodCode
+              goodCode,
             )}`}" aria-label="TypeScript Playground" target="_blank" rel="noreferrer noopener"></a>
             <pre style="background-color: rgb(243, 244, 246); padding: 0 20px 20px 20px; font-size: 0.9rem;"><code>${
               hljs.highlight((goodCode || "").replace(/✅/g, "✅".charAt(0)), {
@@ -157,9 +157,9 @@ const html = layout(
       { ...parse(fs.readFileSync(`${tipsDir}/${filename}`).toString()) },
     ])
     .map(([filename, props]) =>
-      toHtml({ ...props, index: filename.split("-")[0], path: path(filename) })
+      toHtml({ ...props, index: filename.split("-")[0], path: path(filename) }),
     )
-    .join("")
+    .join(""),
 );
 
 fs.writeFile("./emails.html", html, "utf8", (err) => {

@@ -1,7 +1,7 @@
 # TypeScript.tips
 
 <p align="center">
-  <a href="https://typescript.tips/">
+  <a href="https://typescript.odone.me/">
     <img alt="TypeScript.tips logo" src="public/logo.png" width="200" height="200" style="max-width: 100%;" />
   </a>
 </p>
@@ -13,4 +13,4 @@
 
 Ready to step up your static types game in TypeScript?
 
-Visit [TypeScript.tips](https://typescript.tips/).
+Visit [typescript.odone.me](https://typescript.odone.me/).
